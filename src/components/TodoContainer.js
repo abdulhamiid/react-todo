@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 import Header from './Header';
+import InputTodo from './InputTodo';
 import TodosList from './TodosList';
 
 class TodoContainer extends React.Component {
@@ -58,6 +59,7 @@ class TodoContainer extends React.Component {
     return (
       <>
         <Header />
+        <InputTodo />
         <TodosList todos={todos} handleChangeProps={this.handleChange} delTodoProps={this.delTodo}/>
       </>
     );

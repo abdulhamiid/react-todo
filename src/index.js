@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+
+// stylesheet
+
+import './App.css';
 import reportWebVitals from './reportWebVitals';
 import TodoContainer from './components/TodoContainer';
 

@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-// stylesheet
+import TodoContainer from './functionBased/components/TodoContainer';
 
-import './App.css';
+// stylesheet
+import './functionBased/App.css';
 import reportWebVitals from './reportWebVitals';
-import TodoContainer from './components/TodoContainer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

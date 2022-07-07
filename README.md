@@ -8,7 +8,7 @@
 ## Built With
 
 - REACT
-- Both Functionat & Class componets
+- Both Functional & Class componets
 - Linters
 
 

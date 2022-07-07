@@ -8,7 +8,7 @@
 ## Built With
 
 - REACT
-- Both Functional & Class componets
+- Both Functional & Class components
 - Linters
 
 
@@ -30,7 +30,7 @@ https://github.com/abdulhamiid/react-todo.git
 ### Install all dependencies
 
 ```
-npm intall
+npm install
 ```
 
 ### Deployment

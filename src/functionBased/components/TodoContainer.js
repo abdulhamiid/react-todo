@@ -1,78 +1,73 @@
-/* eslint-disable */
-import React, { useEffect, useState } from "react"
-import Header from "./Header"
-import InputTodo from "./InputTodo"
-import TodosList from "./TodosList"
-import { v4 as uuidv4 } from "uuid"
+import React, { useEffect, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import Header from './Header';
+import InputTodo from './InputTodo';
+import TodosList from './TodosList';
 
 const TodoContainer = () => {
-  const [todos, setTodos] = useState(getInitialTodos())
+  // eslint-disable-next-line
+  const [todos, setTodos] = useState(getInitialTodos());
 
-  const handleChange = id => {
-    setTodos(prevState =>
-      prevState.map(todo => {
-        if (todo.id === id) {
-          return {
-            ...todo,
-            completed: !todo.completed,
-          }
-        }
-        return todo
-      })
-    )
-  }
+  const handleChange = (id) => {
+    setTodos((prevState) => prevState.map((todo) => {
+      if (todo.id === id) {
+        return {
+          ...todo,
+          completed: !todo.completed,
+        };
+      }
+      return todo;
+    }));
+  };
 
-  const delTodo = id => {
+  const delTodo = (id) => {
     setTodos([
-      ...todos.filter(todo => {
-        return todo.id !== id
-      }),
-    ])
-  }
+      ...todos.filter((todo) => todo.id !== id),
+    ]);
+  };
 
-  const addTodoItem = title => {
+  const addTodoItem = (title) => {
     const newTodo = {
       id: uuidv4(),
-      title: title,
+      title,
       completed: false,
-    }
-    setTodos([...todos, newTodo])
-  }
+    };
+    setTodos([...todos, newTodo]);
+  };
 
+  /* eslint no-param-reassign: "error" */
   const setUpdate = (updatedTitle, id) => {
     setTodos(
-      todos.map(todo => {
+      todos.map((todo) => {
         if (todo.id === id) {
-          todo.title = updatedTitle
+          todo.title = updatedTitle;
         }
-        return todo
-      })
-    )
-  }
+        return todo;
+      }),
+    );
+  };
 
-function getInitialTodos() {
+  function getInitialTodos() {
   // getting stored items
-  const temp = localStorage.getItem("todos")
-  const savedTodos = JSON.parse(temp)
-  return savedTodos || []
-}
-useEffect(() => {
-  console.log("test run")
-
-  // getting stored items
-  const temp = localStorage.getItem("todos")
-  const loadedTodos = JSON.parse(temp)
-
-  if (loadedTodos) {
-    setTodos(loadedTodos)
+    const temp = localStorage.getItem('todos');
+    const savedTodos = JSON.parse(temp);
+    return savedTodos || [];
   }
-}, [])
+  useEffect(() => {
+    // getting stored items
+    const temp = localStorage.getItem('todos');
+    const loadedTodos = JSON.parse(temp);
 
-useEffect(() => {
+    if (loadedTodos) {
+      setTodos(loadedTodos);
+    }
+  }, []);
+
+  useEffect(() => {
   // storing todos items
-  const temp = JSON.stringify(todos)
-  localStorage.setItem("todos", temp)
-}, [todos])
+    const temp = JSON.stringify(todos);
+    localStorage.setItem('todos', temp);
+  }, [todos]);
 
   return (
     <div className="container">
@@ -87,7 +82,7 @@ useEffect(() => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TodoContainer
+export default TodoContainer;

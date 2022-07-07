@@ -49,7 +49,7 @@ Run ```npm start```
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/abdulhamiid/react-tod0/issues).
+Feel free to check the [issues page](https://github.com/abdulhamiid/react-todo/issues).
 
 ## Show your support
 

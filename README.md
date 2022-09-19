@@ -24,7 +24,7 @@ https://github.com/abdulhamiid/react-todo.git
 
 ### Live Demo 
 - Deployed with netlify
-- [Link here](https://deft-tanuki-7004ac.netlify.app)
+- [Link here](https://eclectic-brioche-50e38d.netlify.app/)
 
 ## Basic Setup
 ### Install all dependencies
